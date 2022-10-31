@@ -8,10 +8,9 @@ Eğer boş kalan ağıllar varsa 0 (sıfır) değerle ekrana yazdır.
 */
 
 $barnCount = 5;
-$totalCapacity = 170;
+$totalCapacity = 150;
 $sheepCount = 161;
 $capacity = $totalCapacity / $barnCount; //capacity of each barn
-$x = array();
 $y = array();
 echo "Single Barn capacity: $capacity <br> Total Capacity: $totalCapacity <br> Sheep Count: $sheepCount <br><br>"; // values of variables
 for ($i = $barnCount; $i > 0; $i--) {
@@ -35,5 +34,8 @@ foreach ($y as $space) { //used foreach to work on all declared spaces with orde
 }
 if ($space == 0) { //works if space equals to 0
     echo "<br>Sheeps remain leftout: " . ($sheepCount) . "<br>"; //Shows the sheeps that leftout.
-}else if($space > 0){} //we avoid to give errors for true statements
-else{ echo "ERROR!";} //user will get error if there is negative space
+} else if ($space > 0) {
+} //we avoid to give errors for true statements
+else {
+    echo "ERROR!";
+} //user will get error if there is negative space
