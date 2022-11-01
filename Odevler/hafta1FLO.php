@@ -44,3 +44,4 @@ else if ($space > 0) {} //we avoid to give errors for true statements
 else {
     echo "ERROR!"; //user will get error if there is negative space
 }
+?>
