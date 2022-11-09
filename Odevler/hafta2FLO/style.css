@@ -1,0 +1,50 @@
+* {
+    font-family: Quicksand;
+}
+
+h3 {
+    float: left;
+    margin-left: 3%;
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    height: 40px;
+    border: 1px solid black;
+    padding-left: 15px;
+}
+
+.cntr {
+    text-align: center;
+}
+
+.submit {
+    background-color: #4d73be;
+    color: white;
+    float: right;
+    margin: 2.4%;
+    border: none;
+    height: 33px;
+    width: 130px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    border: 1px solid black;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
