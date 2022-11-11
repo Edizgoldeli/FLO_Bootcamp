@@ -11,7 +11,7 @@ $adet1a = guvenlik($_SESSION["adet1"]); //önceden eklenmiş ürünler silinmeme
 $adet2a = guvenlik($_SESSION["adet2"]);
 $adet3a = guvenlik($_SESSION["adet3"]);
 
-if( $_POST["adet1"] < 0 || $_POST["adet1"] == ""){ // girilen adet 0'dan küçükse yanlış girdi olmaması için 0'a eşitledik
+if( $_POST["adet1"] < 0 || $_POST["adet1"] == ""){ // girilen adet 0'dan küçükse yada boşsa yanlış girdi olmaması için 0'a eşitledik
     $_POST["adet1"] = 0;
 }
 if( $_POST["adet2"] < 0 || $_POST["adet2"] == ""){
