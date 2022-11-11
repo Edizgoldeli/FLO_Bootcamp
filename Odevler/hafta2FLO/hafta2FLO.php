@@ -3,7 +3,7 @@
 session_start();
 
 $urunler = array(
-    array("Ülker Çikolatalı Gofret 40 gr", "10₺"),//ürün ismini ve fiyatını tanımladık
+    array("Ülker Çikolatalı Gofret 40 gr", "10₺"), //ürün ismini ve fiyatını tanımladık
     array("Eti Damak Kare Çikolata 60 gr", "20₺"),
     array("Nestle Bitter Çikolata 50 gr", "20₺")
 );
@@ -16,6 +16,7 @@ $fiyat1 = $adet1 * $urunler[0][1]; //birden fazla eklenen ürünlerin fiyatını
 $fiyat2 = $adet2 * $urunler[1][1];
 $fiyat3 = $adet3 * $urunler[2][1];
 $total = $fiyat1 + $fiyat2 + $fiyat3; //sepet tutarını hesapladık
+
 ?>
 <!DOCTYPE html>
 
@@ -64,40 +65,65 @@ $total = $fiyat1 + $fiyat2 + $fiyat3; //sepet tutarını hesapladık
 
         <input type="submit" class="submit" value="Ürünü sepete ekle">
         </form>
+        <?php
+        if ($fiyat1 == "" && $fiyat1 == 0) { // fiyat 0₺ yada direkt girdi bilgisi yoksa bunu kaydediyoruz 
+            $a = 1;
+        } else {
+            $a = 0;
+        }
+        if ($fiyat2 == "" && $fiyat2 == 0) {
+            $b = 1;
+        } else {
+            $b = 0;
+        }
+        if ($fiyat3 == "" && $fiyat3 == 0) {
+            $c = 1;
+        } else {
+            $c = 0;
+        }
 
-        <table border='1' width='95%'>
-            <h3>Sepetiniz:</h3>
-            <tr>
-                <td><b>Ürün Adı</b></td>
-                <td class="cntr"><b>Adet</b></td>
-                <td class="cntr"><b>Fiyat</b></td>
-            </tr>
+        if ($a == 1 && $b == 1 && $c == 1) { //eğer hiçbir ürünün değeri 0'dan büyük değil ve/veya boşsa bu koşul çalışır, sepet yerine sepet boş görseli gösterilir.
+        ?>
+            <div class="sepetBos"> <!-- Hocam bu kısmı istemediğinizi biliyorum ama eklemek istedim 😅 -->
+                <img src="https://ediz.goldeli.com/FLO_odev2_sepetbos.png" alt="Sepetinizde ürün bulunmamaktadır" width="300px">
+            </div>
+        <?php
+        } else {
+        ?>
+            <table border='1' width='95%'>
+                <h3>Sepetiniz:</h3>
+                <tr>
+                    <td><b>Ürün Adı</b></td>
+                    <td class="cntr"><b>Adet</b></td>
+                    <td class="cntr"><b>Fiyat</b></td>
+                </tr>
 
-            <tr>
-                <td><?php echo $urunler[0][0]; ?></td>
-                <td class="cntr"><?php echo $adet1; ?></td>
-                <td class="cntr"><?php echo $fiyat1; ?>₺</td>
-            </tr>
-            <tr>
-                <td><?php echo $urunler[1][0]; ?></td>
-                <td class="cntr"><?php echo $adet2; ?></td>
-                <td class="cntr"><?php echo $fiyat2; ?>₺</td>
-            </tr>
-            <tr>
-                <td><?php echo $urunler[2][0]; ?></td>
-                <td class="cntr"><?php echo $adet3; ?></td>
-                <td class="cntr"><?php echo $fiyat3; ?>₺</td>
-            </tr>
-            <tr>
-                <td colspan="2">Genel Toplam</td>
+                <tr>
+                    <td><?php echo $urunler[0][0]; ?></td>
+                    <td class="cntr"><?php echo $adet1; ?></td>
+                    <td class="cntr" aria-placeholder="0"><?php echo $fiyat1; ?>₺</td>
+                </tr>
+                <tr>
+                    <td><?php echo $urunler[1][0]; ?></td>
+                    <td class="cntr"><?php echo $adet2; ?></td>
+                    <td class="cntr"><?php echo $fiyat2; ?>₺</td>
+                </tr>
+                <tr>
+                    <td><?php echo $urunler[2][0]; ?></td>
+                    <td class="cntr"><?php echo $adet3; ?></td>
+                    <td class="cntr"><?php echo $fiyat3; ?>₺</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Genel Toplam</td>
 
-                <td class="cntr"><?php echo $total; ?>₺</td>
-            </tr>
-        </table>
-        <form method="post" action="sepetKontrol.php">
-            <input type="hidden" name="temizle" value="1"> <!-- sepeti temizlemek için php tarafında tüm seçili ürünleri silen fonksiyonu çalıştırmak için 1 değerini yolladık -->
-            <input type="submit" class="submit" value="Sepeti Temizle">
+                    <td class="cntr"><?php echo $total; ?>₺</td>
+                </tr>
+            </table>
+            <form method="post" action="sepetKontrol.php">
+                <input type="hidden" name="temizle" value="1"> <!-- sepeti temizlemek için php tarafında tüm seçili ürünleri silen fonksiyonu çalıştırmak için 1 değerini yolladık -->
+                <input type="submit" class="submit" value="Sepeti Temizle">
     </center>
+<?php } ?>
 </body>
 
 </html>
