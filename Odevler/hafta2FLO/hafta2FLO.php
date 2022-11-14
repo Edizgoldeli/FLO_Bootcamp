@@ -48,7 +48,7 @@ $total = $fiyat1 + $fiyat2 + $fiyat3; //sepet tutarını hesapladık
                     <!-- form işlemini post metoduyla sepetKontrol.php'ye yollayacağımızı belirledik -->
                     <td><?php echo $urunler[0][0]; ?></td>
                     <td class="cntr"><?php echo $urunler[0][1]; ?></td>
-                    <td class="cntr"><input type="number" name="adet1" min="-10" max="50" placeholder="0"></td> <!-- ürün adedi eklenebilmesi için number türünde girdi alanı ekledik ve min max ile aralığı daraltıp kabul edilmeyen girdilerin engellenmesini sağladık ( php tarafında bir kontrol daha var mininimum için ) -->
+                    <td class="cntr"><input type="number" name="adet1" min="0" max="50" placeholder="0"></td> <!-- ürün adedi eklenebilmesi için number türünde girdi alanı ekledik ve min max ile aralığı daraltıp kabul edilmeyen girdilerin engellenmesini sağladık ( php tarafında bir kontrol daha var mininimum için ) -->
             </tr>
             <tr>
                 <td><?php echo $urunler[1][0]; ?></td>
