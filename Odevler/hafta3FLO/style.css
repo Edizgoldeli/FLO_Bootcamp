@@ -51,12 +51,14 @@ td {
     border-radius: 3px;
     font-weight: bold;
 }
+
 .submit:hover {
     border-radius: 5px;
     background: #355390;
 }
 
-input[type='text'],[type='tel'] {
+input[type='text'],
+[type='tel'] {
     -moz-appearance: textfield;
     margin-top: 5px;
     border-radius: 2px;
@@ -77,4 +79,23 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.box {
+    height: 50px;
+    width: 300px;
+}
+
+#selection1,
+#selection2 {
+margin-top: 10px;
+    border-radius: 2px;
+    background-color: rgb(35, 122, 180);
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline;
+}
+a{
+    text-decoration: none;
 }

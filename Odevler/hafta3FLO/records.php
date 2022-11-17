@@ -1,6 +1,15 @@
+<?php include "top.php";?>
 <head>
 <link rel=stylesheet href="style.css" /> 
 </head>
+<center>
+<table border='1' width='95%'>
+            <!-- table width set as 95% of the pages width -->
+            <tr class="bold">
+                <td>Adı Soyadı</td> <!-- set headings-->
+                <td class="cntr">Telefon Numarası</td>
+                <td class="cntr">İşlem</td>
+            </tr>
 <?php
 include "dbconnection.php"; //included database connection to make this page work independently
             $sorgu = $conn->query("select * from user", PDO::FETCH_ASSOC);
@@ -28,4 +37,8 @@ include "dbconnection.php"; //included database connection to make this page wor
             <tr>
                 <td colspan="3" class="cntr">Sistemde toplam -<?php echo $count;?>- kişi var</td>
             </tr>
-        </table>
+            </table>
+        </center>
+</body>
+
+</html>
