@@ -6,7 +6,7 @@ $sql = $conn->prepare("delete from user where ID=?"); // declared pdo sql statem
 $delete = $sql->execute([$ID]); //declared $ID so row which has $ID will deleted
 if($delete){
     echo"<script>
-    window.top.location = 'index.php'; 
+    window.top.location = 'records.php'; 
     </script>"; //send user to index page
 }else{
     echo"<script>

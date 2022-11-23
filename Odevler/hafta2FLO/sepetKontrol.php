@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 function guvenlik($metin = '')
 {
     $metin = strip_tags($metin);
@@ -31,6 +33,7 @@ if($temizle == 1){ //sepeti temizleyip $temizle değerinide 0'a eşitledik böyl
     $adet3 = 0;
     $temizle = 0;
 }
+
 $_SESSION["adet1"] = $adet1; //diğer sayfada gösterim yapılabilmesi için değişkenleri session'a kaydettik
 $_SESSION["adet2"] = $adet2;
 $_SESSION["adet3"] = $adet3;
