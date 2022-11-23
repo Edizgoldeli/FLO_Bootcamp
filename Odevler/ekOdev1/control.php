@@ -16,7 +16,6 @@ foreach ($sorgu as $veri) {
     $valueLoss = $veri['valueLoss'];
     $vLoss = (100 - $valueLoss) / 100; //turned from 10% -> 0.9 / 25% -> 0.75
 }
-echo "$amount" . "gr" . " $unitPrice" . "₺" . " $KDV" . "%" . " $status <br>";
 function tazelikEtkisi($status, $amount, $price, $KDV, $vLoss, $ID)
 {
     if ($status == TRUE) {
