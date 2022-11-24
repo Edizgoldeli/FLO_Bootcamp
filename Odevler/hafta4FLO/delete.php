@@ -2,11 +2,11 @@
 include "dbconnection.php";
 $ID= $_POST['ID'];
 
-$sql = $conn->prepare("delete from user where ID=?"); // declared pdo sql statement which deletes selected id
+$sql = $conn->prepare("delete from haftaDort where ID=?"); // declared pdo sql statement which deletes selected id
 $delete = $sql->execute([$ID]); //declared $ID so row which has $ID will deleted
 if($delete){
     echo"<script>
-    window.top.location = 'records.php'; 
+    window.top.location = 'index.php'; 
     </script>"; //send user to index page
 }else{
     echo"<script>
