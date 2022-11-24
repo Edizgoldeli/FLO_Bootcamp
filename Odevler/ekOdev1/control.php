@@ -75,7 +75,7 @@ if($status == 1){
         font-family: Quicksand;
     }
 </style>
-<table border='2' style="border-collapse: collapse;" width='250px'>
+<table border='2' style="border-collapse: collapse; margin-left: auto; margin-right: auto;" width='250px'>
 <tr>
         <td>Tür: <?php echo $prdctName; ?></td>
     </tr>
@@ -126,4 +126,4 @@ if($status == 1){
         <td> Genel Toplam: <?php decimal($lastPrice); ?>₺ </td>
     </tr>
 </table>
-<a href="index.php"> Go back </a>
+<center><a href="index.php"> Go back </a></center>

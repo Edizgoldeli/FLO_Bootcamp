@@ -1,7 +1,7 @@
 <?php
 require_once "dbConnection.php";
 ?>
- <table border='1' style="border-collapse: collapse;" width='95%'>
+ <table border='1' style="border-collapse: collapse; margin-left: auto; margin-right: auto;" width='350px'>
                 
                 <tr>
                     <td><b>Ot</b></td>
