@@ -46,8 +46,10 @@ class TcKimlik
         }
         if($checkCounter == 4){
             $status = 1;
+            $GLOBALS['status']=$status;
         }else{
             $status = 0;
+            $GLOBALS['status']=$status;
         }
         echo "passed $checkCounter checks => $status";
     }

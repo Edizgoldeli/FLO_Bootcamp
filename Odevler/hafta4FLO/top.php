@@ -15,13 +15,4 @@ $count = 0;
 </head>
 
 <body>
-    <center>
-        <div class="box">
-        <a href="index.php">
-            <div id="selection1"> Yeni kayıt</div>
-        </a>
-        <a href="records.php">
-            <div id="selection2">kayıtlar </div>
-        </a>
-        </div>
-    </center>
+    <br><br>

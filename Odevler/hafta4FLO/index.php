@@ -12,8 +12,7 @@
         </form>
         <br>
 
-
-
+        <?php include "records.php";?>
         
         
     </center>
