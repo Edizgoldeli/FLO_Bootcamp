@@ -1,0 +1,101 @@
+* {
+    font-family: Quicksand;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+h3 {
+    float: left;
+    margin-left: 3%;
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    height: 40px;
+    border: 1px solid black;
+    padding-left: 15px;
+}
+
+
+.cntr {
+    text-align: center;
+}
+
+.delete {
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.delete:hover {
+    border-radius: 5px;
+    background: #eee;
+}
+
+.submit {
+    background-color: #4d73be;
+    color: white;
+    margin: 2.4%;
+    border: none;
+    height: 33px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.submit:hover {
+    border-radius: 5px;
+    background: #355390;
+}
+
+input[type='text'],
+[type='tel'] {
+    -moz-appearance: textfield;
+    margin-top: 5px;
+    border-radius: 2px;
+    border: 1px solid black;
+    text-align: center;
+    width: 200px;
+    height: 25px;
+
+}
+
+.sepetBos {
+
+    padding-top: 130px;
+    width: 300px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.box {
+    height: 50px;
+    width: 300px;
+}
+
+#selection1,
+#selection2 {
+margin-top: 10px;
+    border-radius: 2px;
+    background-color: rgb(35, 122, 180);
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
