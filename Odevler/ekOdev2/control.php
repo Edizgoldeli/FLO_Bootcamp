@@ -24,7 +24,6 @@ foreach ($sorgu as $veri) {
     }
 }
 $cevherFiyat = cevherFiyat($ID1);
-echo "<br>cevherfiyat $cevherFiyat <br>";
 function taneEtkisi($cevherFiyat, $size)
 {
     if ($size == 3) {
@@ -43,8 +42,6 @@ if ($size == 3) {
 } else if ($size == 1) {
     $oreName = "Erik";
 }
-echo "<br>taneEtkisi ";
-echo taneEtkisi($cevherFiyat, $size) . "<br>";
 
 $taneEtkisi = taneEtkisi($cevherFiyat, $size);
 
@@ -54,9 +51,9 @@ function temizlikEtkisi($percent, $taneEtkisi)
     $lastPrice = $percent * $taneEtkisi;
     return $lastPrice;
 }
-echo "<br>temizlik etkisi ";
+
 $temizlikEtkisi = temizlikEtkisi($percent, $taneEtkisi);
-echo "<br>";
+
 function decimal($number)
 {
     $number = number_format($number, 0, ',', '');
