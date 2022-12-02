@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: localhost:8889
--- Üretim Zamanı: 02 Ara 2022, 22:49:46
+-- Üretim Zamanı: 02 Ara 2022, 22:51:57
 -- Sunucu sürümü: 5.7.25
 -- PHP Sürümü: 7.3.1
 
@@ -32,20 +32,6 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`ID`, `username`, `password`) VALUES
 (1, 'admin', '$2y$10$lT7zAWchcQ.dxDeU4DO56.4pvByvionuWRwE3CwpBK/hHz696sLka');
-
--- --------------------------------------------------------
-
---
--- Tablo için tablo yapısı `donation`
---
-
-CREATE TABLE `donation` (
-  `ID` int(11) NOT NULL,
-  `donation_ID` int(11) NOT NULL,
-  `grantee_ID` int(11) NOT NULL,
-  `amount` int(3) NOT NULL,
-  `timeStmp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 -- --------------------------------------------------------
 
@@ -96,15 +82,6 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Tablo için indeksler `donation`
---
-ALTER TABLE `donation`
-  ADD PRIMARY KEY (`donation_ID`),
-  ADD UNIQUE KEY `donation_ID` (`donation_ID`),
-  ADD KEY `donation_ibfk_1` (`ID`),
-  ADD KEY `grantee_ibfk_1` (`grantee_ID`);
-
---
 -- Tablo için indeksler `donor`
 --
 ALTER TABLE `donor`
@@ -127,14 +104,3 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `donor`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- Dökümü yapılmış tablolar için kısıtlamalar
---
-
---
--- Tablo kısıtlamaları `donation`
---
-ALTER TABLE `donation`
-  ADD CONSTRAINT `donation_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `donor` (`ID`),
-  ADD CONSTRAINT `grantee_ibfk_1` FOREIGN KEY (`grantee_ID`) REFERENCES `donor` (`ID`);
