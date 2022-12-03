@@ -95,7 +95,14 @@ if ($searchType == "all") {
         if ($totalDonation != NULL) {
             $totalDonationLitre = array_sum($totalDonation) / 1000;
         }
-
+        if ($count == 0) {
+            $value = $text->upper($search);
+        ?>
+            <tr>
+                <td colspan="7" id="td"> Sistemimizde <?php echo "$msg $value"; ?> olan bulunmamaktadır.</td>
+            </tr>
+        <?php
+        }
         ?>
     </table>
 </div>
