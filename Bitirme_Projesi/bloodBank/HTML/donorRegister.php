@@ -11,11 +11,11 @@ if ($_SESSION['ID']) {
 <h2>Donör Kayıt</h1><br><br>
 
     <form action="<?php $direct->directory("PHP","donorRegister"); ?>" method="post">
-        <input type="text" class="name" name="name" placeholder="İsim">
-        <input type="text" class="surname" name="surname" placeholder="Soyad">
-        <input type="date" class="birth" name="birth" placeholder="Doğum günü">
+        <input type="text" class="name" name="name" placeholder="İsim" required>
+        <input type="text" class="surname" name="surname" placeholder="Soyad" required>
+        <input type="date" class="birth" name="birth" placeholder="Doğum günü" required>
         <input type="email" class="email" name="email" placeholder="E-mail" required>
-        <input type="phone" class="tel" name="tel" placeholder="Telefon" minlength="10" maxlength="12">
+        <input type="phone" class="tel" name="tel" placeholder="Telefon" minlength="10" maxlength="12" required>
         <select name="bType" class="bType" required>
             <option class="searchBar" value="00 Rh-" ;> <?php echo "00 Rh-"; ?></option>
             <option class="searchBar" value="00 Rh+" ;> <?php echo "00 Rh+"; ?></option>
@@ -30,9 +30,9 @@ if ($_SESSION['ID']) {
             <option class="searchBar" value="AB Rh-" ;> <?php echo "AB Rh-"; ?></option>
             <option class="searchBar" value="AB Rh+" ;> <?php echo "AB Rh+"; ?></option>
         </select>
-        <input type="number" class="donation" name="donation" placeholder="Bağışlanan Miktar/mL">
-        <input type="password" class="password" name="password" placeholder="parola belirleyin">
-        <select name="gender" class="gender">
+        <input type="number" class="donation" name="donation" placeholder="Bağışlanan Miktar/mL" required>
+        <input type="password" class="password" name="password" placeholder="parola belirleyin" required>
+        <select name="gender" class="gender" required>
             <option class="searchBar" value="Erkek" ;> <?php echo "Erkek"; ?></option>
             <option class="searchBar" value="Kadın" ;> <?php echo "Kadın"; ?></option>
         </select>
