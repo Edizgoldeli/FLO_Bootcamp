@@ -1,5 +1,5 @@
 <p align="center">Canlı: https://ediz.goldeli.com/bloodBank  kullanıcıAdı/Şifre: admin</p>
-<p align="center">Video: https://youtu.be/SGbaah-TdmI </p>
+<p align="center">Video: https://vimeo.com/777594083 </p>
 
 <h1>Proje Hakkında:</h1>
 <H3> Ziyaretçi:</h3>
