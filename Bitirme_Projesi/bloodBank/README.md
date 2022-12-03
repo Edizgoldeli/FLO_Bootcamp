@@ -23,7 +23,7 @@
 <p> * Ekranda listelenen sonuçların toplam kan miktarı belirtilir</p>
 <p> * Aratılan kayıtlar bulunmuyorsa uyarı mesajı gösterilir</p>
 <p> * Aratılan sonuçlar indirilmek istenirse CSV indir butonu ile ekranda bulunan sonuçlar indirilebilir</p>
-<p> * Menüden ziyaretçi kayıt sorgu, donör ekleme, admin kayıt sorgu ve çıkış yapma sayfalarına erişebilir</p>
+<p> * Menüden ziyaretçi kayıtlar, donör ekleme, admin kayıt listeleme ve çıkış yapma sayfalarına erişebilir</p>
 <br>
 <h2 align="center"> Admin </h2>
 <p align="center">
