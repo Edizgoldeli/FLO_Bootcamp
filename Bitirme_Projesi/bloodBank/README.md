@@ -63,6 +63,8 @@
 <p> * Mobil ve Masaüstü cihazlar için responsive kodlandı </p>
 <p> * Kan bankası olduğu için kırmızı tonları tercih edildi</p>
 <p> * Ekran boyutu değişimlerinde daha yumuşak bir geçiş için css'in transition özelliği kullanıldı </p>
+<p> * Meta tagleri ile destekleyen tarayıcılarda tema rengi ayarlanıp sayfa bütünlüğü arttırıldı </p>
+
 <h2 align="center"> Tasarım </h2>
 <p align="center">
 <img width="705" alt="Ekran Resmi 2022-12-03 ÖÖ 10 22 51" src="https://user-images.githubusercontent.com/38820143/205429908-98a48f5e-05b1-47d4-bcc3-d463615bed50.png">
