@@ -1,6 +1,7 @@
 <?php include_once "top.php";
 include_once "dbConnection.php";
 $text = new Text;
+$url = new Url;
 ?>
 <meta charset="utf-8">
 <br><br><br><br><br><br>
@@ -16,8 +17,6 @@ $text = new Text;
             <th class="cntr">Miktar (mL)</th>
         </tr>
         <?php
-        $url = new Url;
-
         if ($_POST['bloodType'] == NULL) {
             $url->redirect("", "index");
         }
